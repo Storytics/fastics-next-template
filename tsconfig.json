@@ -1,0 +1,33 @@
+{
+  "compilerOptions": {
+    "baseUrl": "src",
+    "paths": {
+      "@/components/*": ["./components/*"],
+      "@/styles/*": ["/styles/*"],
+      "@/locales/*": ["/locales/*"],
+      "@/types/*": ["/types/*"],
+      "@/utils/*": ["/utils/*"],
+      "@/graphql/*": ["/graphql/*"]
+    },
+    "target": "es5",
+    "lib": ["dom", "dom.iterable", "esnext", "esnext.intl"],
+    "noImplicitAny": true,
+    "noImplicitThis": true,
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "skipLibCheck": true,
+    "strict": true,
+    "alwaysStrict": true,
+    "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
+    "esModuleInterop": true,
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": true,
+    "jsx": "preserve"
+  },
+  "exclude": ["node_modules"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"]
+}

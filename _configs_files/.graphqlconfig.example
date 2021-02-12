@@ -1,0 +1,25 @@
+{
+  "name": "propost-server",
+  "schemaPath": "/src/graphql/schema.graphql",
+  "extensions": {
+    "endpoints": {
+      "Default GraphQL Endpoint": {
+        "url": "URL",
+        "headers": {
+          "x-hasura-admin-secret": "CODE"
+        },
+        "introspect": false
+      },
+      "graphql-codegen": {
+        "generates": {
+          "/src/api/types.ts": {
+            "plugins": [
+              "typescript",
+              "typescript-resolvers"
+            ]
+          }
+        }
+      }
+    }
+  }
+}
