@@ -35,9 +35,9 @@ export default function withWrapper<TPropsType extends IComponentProps>(
   render: RenderWrapper<TPropsType>
 ): ReactNode {
   const WrappedComponent = (props: TPropsType): ReactNode => render(props);
-  (WrappedComponent as FunctionComponent).displayName = `${name}(${getComponentName(
-    ChildComponent
-  )})`;
+  (
+    WrappedComponent as FunctionComponent
+  ).displayName = `${name}(${getComponentName(ChildComponent)})`;
 
   // Helper for Next.js support (getInitialProps)
   const getInitialProps = tryGetInitialPropsMethod(ChildComponent);
